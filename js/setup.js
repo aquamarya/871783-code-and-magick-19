@@ -1,14 +1,14 @@
 'use strict';
 
 var WIZARD_NAMES = [
-  'Иван ',
-  'Хуан Себастьян ',
-  'Мария ',
-  'Кристоф ',
-  'Виктор ',
-  'Юлия ',
-  'Люпита ',
-  'Вашингтон '
+  'Иван',
+  'Хуан Себастьян',
+  'Мария',
+  'Кристоф',
+  'Виктор',
+  'Юлия',
+  'Люпита',
+  'Вашингтон'
 ];
 var WIZARD_SURNAMES = [
   'да Марья',
@@ -36,8 +36,8 @@ var WIZARD_EYESCOLORS = [
   'green'
 ];
 
-var getRandomItem = function (array) {
-  return Math.floor(Math.random() * array.length);
+var getRandomItem = function (length) {
+  return Math.floor(Math.random() * length);
 };
 
 var wizards = [];
@@ -45,9 +45,9 @@ var wizards = [];
 var createWizards = function (length) {
   for (var i = 0; i < length; i++) {
     wizards[i] = {
-      name: WIZARD_NAMES[getRandomItem(WIZARD_NAMES)] + '' + WIZARD_SURNAMES[getRandomItem(WIZARD_SURNAMES)],
-      coatColor: WIZARD_COATCOLORS[getRandomItem(WIZARD_COATCOLORS)],
-      eyesColor: WIZARD_EYESCOLORS[getRandomItem(WIZARD_EYESCOLORS)]
+      name: WIZARD_NAMES[getRandomItem(WIZARD_NAMES.length)] + ' ' + WIZARD_SURNAMES[getRandomItem(WIZARD_SURNAMES.length)],
+      coatColor: WIZARD_COATCOLORS[getRandomItem(WIZARD_COATCOLORS.length)],
+      eyesColor: WIZARD_EYESCOLORS[getRandomItem(WIZARD_EYESCOLORS.length)]
     };
   }
   return wizards;
